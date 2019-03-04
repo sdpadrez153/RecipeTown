@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS Recipesdb;
+CREATE DATABASE Recipesdb;
