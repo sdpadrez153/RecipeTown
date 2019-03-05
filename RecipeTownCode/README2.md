@@ -6,11 +6,3 @@ The functionality of getting recipes and showing them to the user it starts off 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-hello peeps
-=======
-hello world
->>>>>>> f02caf7eb6c7eddfcbbb7f2847a72243a354a36b
-=======
->>>>>>> 811c23f49efe110506dccfaf5cda49bbf241a416
