@@ -1,4 +1,5 @@
 "use strict";
+// don't change anything in this file
 
 var fs = require("fs");
 var path = require("path");

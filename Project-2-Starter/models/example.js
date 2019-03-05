@@ -1,7 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
-  var Example = sequelize.define("Example", {
-    text: DataTypes.STRING,
-    description: DataTypes.TEXT
+  var Recipes = sequelize.define("recipe", {
+    // api request here will fill out the table 
   });
-  return Example;
+  return Recipes;
 };

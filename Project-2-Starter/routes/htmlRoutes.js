@@ -11,14 +11,15 @@ module.exports = function(app) {
     });
   });
 
+  // this is just in case we do go with the idea of using the chat box 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
-  });
+  // app.get("/example/:id", function(req, res) {
+  //   db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+  //     res.render("example", {
+  //       example: dbExample
+  //     });
+  //   });
+  // });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
