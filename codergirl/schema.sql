@@ -7,12 +7,12 @@ USE recipetown_db;
 CREATE TABLE recipes
 (
 id int NOT NULL AUTO_INCREMENT,
-recipe_name VARCHAR(100) NOT NULL,
-image LONGBLOB NOT NULL,
-cautions VARCHAR(100) NOT NULL,
-dietLabels VARCHAR(100) NOT NULL,
-healthLabels VARCHAR(100) NOT NULL,
-ingredientsLines VARCHAR(1000) NOT NULL,
+recipe_name VARCHAR(100),
+image LONGBLOB,
+cautions VARCHAR(100),
+dietLabels VARCHAR(100),
+healthLabels VARCHAR(100),
+ingredientsLines VARCHAR(1000),
 PRIMARY KEY (id)
 );
 
