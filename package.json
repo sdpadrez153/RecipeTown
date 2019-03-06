@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sdpadrez153/RecipeTown/issues"
   },
-  "homepage": "https://github.com/sdpadrez153/RecipeTown#readme"
+  "homepage": "https://github.com/sdpadrez153/RecipeTown#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
