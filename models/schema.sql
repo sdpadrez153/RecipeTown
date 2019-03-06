@@ -1,4 +1,3 @@
-<<<<<<< HEAD:RecipeTownCode/schema.sql
 -- Create the database task_saver_db and specified it for use.
 DROP DATABASE IF EXISTS recipetown_db;
 CREATE DATABASE recipetown_db;
@@ -19,8 +18,6 @@ PRIMARY KEY (id)
 
 SELECT * FROM recipes;
 
-=======
->>>>>>> 5db3d7c60a2529b748cee948324726f1075e4b46:RecipeTownCode/models/schema.sql
 -- Insert a set of records.
 INSERT INTO Recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
 VALUES ("Turkey Meatballs","https://www.edamam.com/web-img/93c/93c604fef9935bdcad58ab25f44830ab.jpg", "Sulfites", "Low-Carb", 
@@ -58,26 +55,8 @@ salt,
 1/2 pound buffalo mozzarella, torn into chunks,
 a handful of fresh basil leaves");
 
-<<<<<<< HEAD:RecipeTownCode/schema.sql
-INSERT INTO recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
-VALUES ("Fettuccine Alfredo", "https://www.edamam.com/web-img/b54/b5423d756ab23b0eb8c2a9d3ae0ae7ae.jpg", "Sulfites", "NA",
-"Vegetarian, Peanut-Free, Tree-Nut-Free, Alcohol-Free", 
-=======
-INSERT INTO Recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
-VALUES ("Margarita Pizza", "https://www.edamam.com/web-img/4e3/4e34d5c43723aa370698716e01beb329", "Sulfites", "NA", 
-"1 package of pizza dough mix, or your favorite pizza dough recipe,
-4 vine rippened tomatoes,
-1 clove garlic, chopped (optional),
-3 tablespoons chopped fresh oregano,
-2 tablespoons olive oil,
-ground black pepper,
-salt,
-1/2 pound buffalo mozzarella, torn into chunks,
-a handful of fresh basil leaves");
-
 INSERT INTO Recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
 VALUES ("Fettuccine Alfredo", "https://www.edamam.com/web-img/b54/b5423d756ab23b0eb8c2a9d3ae0ae7ae.jpg", "Sulfites", "NA", 
->>>>>>> 5db3d7c60a2529b748cee948324726f1075e4b46:RecipeTownCode/models/schema.sql
 "4 cups heavy cream,
 Kosher salt, to taste,
 1 lb. dried fettuccine,
@@ -102,13 +81,10 @@ VALUES ("Marinated Lamb Chops", "https://www.edamam.com/web-img/e2e/e2e2cd677902
 4 garlic cloves, minced,
 8 frenched 1-inch-thick rib lamb chops (about 1 pound total)");
 
-<<<<<<< HEAD:RecipeTownCode/schema.sql
 INSERT INTO recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
 VALUES ("The Perfect Hamburger", "https://www.edamam.com/web-img/314/314e6bee3bcb75e5e896f1f80ff3b313.jpg", "NA", "NA",
-=======
 INSERT INTO Recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
 VALUES ("The Perfect Hamburger", "https://www.edamam.com/web-img/314/314e6bee3bcb75e5e896f1f80ff3b313.jpg", "Sulfites", "NA",
->>>>>>> 5db3d7c60a2529b748cee948324726f1075e4b46:RecipeTownCode/models/schema.sql
 "Sugar-Conscious, Peanut-Free, Tree-Nut-Free, Alcohol-Free",
 "1 lb. ground chuck or ground lean beef,
 2 Tbs. finely chopped yellow onion,
