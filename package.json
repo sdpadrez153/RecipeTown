@@ -1,0 +1,20 @@
+{
+  "name": "recipetown",
+  "version": "1.0.0",
+  "description": "The functionality of getting recipes and showing them to the user it starts off with showing recipes that are hardcoded in to the home page, the recipes page shows the user the recipe of the day which will be picked out of an array of recipes that we picked along with the ingredients, healthlabels which are the allergens that are not included, cautions which are the actual allergens included, dietlabels meaning what kind of dietary section the recipe belongs to. Next is the calender which holds the recipe of the day for each day that passed.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdpadrez153/RecipeTown.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdpadrez153/RecipeTown/issues"
+  },
+  "homepage": "https://github.com/sdpadrez153/RecipeTown#readme"
+}
