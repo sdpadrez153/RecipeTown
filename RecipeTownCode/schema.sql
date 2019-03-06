@@ -16,6 +16,8 @@ ingredientsLines VARCHAR(1000) NOT NULL,
 PRIMARY KEY (id)
 );
 
+SELECT * FROM recipes;
+
 -- Insert a set of records.
 INSERT INTO recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
 VALUES ("Turkey Meatballs","https://www.edamam.com/web-img/93c/93c604fef9935bdcad58ab25f44830ab.jpg", "Sulfites", "Low-Carb", 
@@ -42,6 +44,7 @@ Salt and pepper to taste");
 
 INSERT INTO recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
 VALUES ("Margarita Pizza", "https://www.edamam.com/web-img/4e3/4e34d5c43723aa370698716e01beb329", "Sulfites", "NA", 
+"Sugar-Conscious, Peanut-Free, Tree-Nut-Free, Alcohol-Free",
 "1 package of pizza dough mix, or your favorite pizza dough recipe,
 4 vine rippened tomatoes,
 1 clove garlic, chopped (optional),
@@ -53,19 +56,8 @@ salt,
 a handful of fresh basil leaves");
 
 INSERT INTO recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
-VALUES ("Margarita Pizza", "https://www.edamam.com/web-img/4e3/4e34d5c43723aa370698716e01beb329", "Sulfites", "NA", 
-"1 package of pizza dough mix, or your favorite pizza dough recipe,
-4 vine rippened tomatoes,
-1 clove garlic, chopped (optional),
-3 tablespoons chopped fresh oregano,
-2 tablespoons olive oil,
-ground black pepper,
-salt,
-1/2 pound buffalo mozzarella, torn into chunks,
-a handful of fresh basil leaves");
-
-INSERT INTO recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
-VALUES ("Fettuccine Alfredo", "https://www.edamam.com/web-img/b54/b5423d756ab23b0eb8c2a9d3ae0ae7ae.jpg", "Sulfites", "NA", 
+VALUES ("Fettuccine Alfredo", "https://www.edamam.com/web-img/b54/b5423d756ab23b0eb8c2a9d3ae0ae7ae.jpg", "Sulfites", "NA",
+"Vegetarian, Peanut-Free, Tree-Nut-Free, Alcohol-Free", 
 "4 cups heavy cream,
 Kosher salt, to taste,
 1 lb. dried fettuccine,
@@ -76,7 +68,7 @@ Finely chopped parsley, for serving");
 
 INSERT INTO recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
 VALUES ("Grilled Steak", "https://www.edamam.com/web-img/ec5/ec5b5a864df655b2bb9fea6630970fae.jpg", "NA", "Low-Carb",
-"Sugar-Conscious, Peanut-Free, Tree-Nut-Free, Alcohol-Free", 
+"Low-Carb", 
 "1 porterhouse, 
 flank, or rib-eye steak, 
 1 3/4 pounds and 1 1/2 inch thick,
@@ -91,7 +83,7 @@ VALUES ("Marinated Lamb Chops", "https://www.edamam.com/web-img/e2e/e2e2cd677902
 8 frenched 1-inch-thick rib lamb chops (about 1 pound total)");
 
 INSERT INTO recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
-VALUES ("The Perfect Hamburger", "https://www.edamam.com/web-img/314/314e6bee3bcb75e5e896f1f80ff3b313.jpg", "Sulfites", "NA",
+VALUES ("The Perfect Hamburger", "https://www.edamam.com/web-img/314/314e6bee3bcb75e5e896f1f80ff3b313.jpg", "NA", "NA",
 "Sugar-Conscious, Peanut-Free, Tree-Nut-Free, Alcohol-Free",
 "1 lb. ground chuck or ground lean beef,
 2 Tbs. finely chopped yellow onion,
@@ -125,6 +117,7 @@ canola (or other neutral oil) oil, for frying,
 
 INSERT INTO recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
 VALUES ("Steak Tacos with Guacamole", "https://www.edamam.com/web-img/b4a/b4a9e17ad70c30d3ef21265f78604a4e.jpg", "Eggs, Milk, Sulfites", "Balanced",
+"Sugar-Conscious, Peanut-Free, Tree-Nut-Free, Alcohol-Free",
 "12 corn tortillas,
 1/2 grilled flank steak,
 2 avocados, halved, pitted and peeled,
@@ -135,6 +128,7 @@ Salt and freshly ground pepper, to taste,
 
 INSERT INTO recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
 VALUES ("Killer Club Sandwich", "https://www.edamam.com/web-img/819/819a2e1f768e5892330b4a479fcaad5a.jpg", "Sulfites, FODMAP", "Low-Carb",
+"Sugar-Conscious, Peanut-Free, Tree-Nut-Free, Alcohol-Free",
 "12 slices Sandwich Bread,
 4 tbsp Mayonnaise,
 1 tbsp Prepared Basil Pesto,
