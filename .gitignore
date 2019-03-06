@@ -3,3 +3,4 @@ testing
 node_modules
 ds_store
 pTest.js
+package-lock.json
