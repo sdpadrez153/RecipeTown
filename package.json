@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "recipetown",
+=======
+  "name": "RecipeTown",
+>>>>>>> 4d7e6487443ebf2338dc80fa58b8961b688114a6
   "version": "1.0.0",
   "description": "The functionality of getting recipes and showing them to the user it starts off with showing recipes that are hardcoded in to the home page, the recipes page shows the user the recipe of the day which will be picked out of an array of recipes that we picked along with the ingredients, healthlabels which are the allergens that are not included, cautions which are the actual allergens included, dietlabels meaning what kind of dietary section the recipe belongs to. Next is the calender which holds the recipe of the day for each day that passed.",
   "main": "server.js",
@@ -11,6 +15,10 @@
     "type": "git",
     "url": "git+https://github.com/sdpadrez153/RecipeTown.git"
   },
+<<<<<<< HEAD
+=======
+  "keywords": [],
+>>>>>>> 4d7e6487443ebf2338dc80fa58b8961b688114a6
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -18,6 +26,15 @@
   },
   "homepage": "https://github.com/sdpadrez153/RecipeTown#readme",
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^0.18.0"
+=======
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.5",
+    "path": "^0.12.7",
+    "sequelize": "^4.43.0"
+>>>>>>> 4d7e6487443ebf2338dc80fa58b8961b688114a6
   }
 }
