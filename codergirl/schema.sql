@@ -1,3 +1,23 @@
+-- Create the database task_saver_db and specified it for use.
+DROP DATABASE IF EXISTS recipetown_db;
+CREATE DATABASE recipetown_db;
+USE recipetown_db;
+
+-- Create the table tasks.
+CREATE TABLE recipes
+(
+id int NOT NULL AUTO_INCREMENT,
+recipe_name VARCHAR(100),
+image LONGBLOB,
+cautions VARCHAR(100),
+dietLabels VARCHAR(100),
+healthLabels VARCHAR(100),
+ingredientsLines VARCHAR(1000),
+PRIMARY KEY (id)
+);
+
+SELECT * FROM recipes;
+
 -- Insert a set of records.
 INSERT INTO recipes (recipe_name, image, cautions, dietLabels, healthLabels, ingredientsLines)
 VALUES ("Turkey Meatballs","https://www.edamam.com/web-img/93c/93c604fef9935bdcad58ab25f44830ab.jpg", "Sulfites", "Low-Carb", 
