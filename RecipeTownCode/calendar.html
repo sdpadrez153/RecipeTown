@@ -11,12 +11,11 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="../RecipeTownCode/public/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="../RecipeTownCode/public/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
 
     <title>Calendar</title>
 </head>
@@ -25,7 +24,6 @@
   <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <div class="container">
           <div class="row">
-              <div class="col s12">
                   <i class="fab fa-twitter" id="twitter"></i>
                   <i class="fab fa-facebook" id="facebook"></i>
                   <i class="fab fa-instagram" id="instagram"></i>
@@ -43,11 +41,11 @@
           <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
       </div>
   </li>
-  <li><a class="waves-effect waves-red" href="../../../index.html">Home</a></li>
-  <li><a class="waves-effect waves-red" href="../../../recipeotd.html">Recipe of the Day</a></li>
+  <li><a class="waves-effect waves-red" href="index.html">Home</a></li>
+  <li><a class="waves-effect waves-red" href="recipeotd.html">Recipe of the Day</a></li>
   <li><a class="waves-effect waves-red" href="../RecipeTownCode/calendar.js/app/view/calendar.html">Calendar</a></li>
-  <li><a class="waves-effect waves-red" href="../../../forum.html">Forum</a></li>
-  <li><a class="waves-effect waves-red" href="../../../contact.html">Contact</a></li>
+  <li><a class="waves-effect waves-red" href="forum.html">Forum</a></li>
+  <li><a class="waves-effect waves-red" href="contact.html">Contact</a></li>
 </ul>
 
 <div id="index-banner" class="parallax-container">
@@ -63,8 +61,46 @@
   <div class="container">
     <div class="section">
         <div class="row">
-            <div class="col m4">  
-              <div id="calendar"></div>
+          <div id="calendar"></div>
+              <!-- <div class="col 12">   -->
+
+              <footer class="page-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l6 s12">
+                            <h5 class="white-text">Team Bio</h5>
+                            <p class="grey-text text-lighten-4">Team Members: Sarah Clark, Yasiin Muhammad, Isai Ramirez, Daniel Mata.      
+                                This is our Project 2 Website</p>
+
+
+                        </div>
+                        <div class="col l3 s12">
+                            <h5 class="white-text">Settings</h5>
+                            <ul>
+                                <li><a class="white-text" href="#!">Link 1</a></li>
+                                <li><a class="white-text" href="#!">Link 2</a></li>
+                                <li><a class="white-text" href="#!">Link 3</a></li>
+                                <li><a class="white-text" href="#!">Link 4</a></li>
+                            </ul>
+                        </div>
+                        <div class="col l3 s12">
+                            <h5 class="white-text">Connect</h5>
+                            <ul>
+                                <li><a class="white-text" href="#!">Link 1</a></li>
+                                <li><a class="white-text" href="#!">Link 2</a></li>
+                                <li><a class="white-text" href="#!">Link 3</a></li>
+                                <li><a class="white-text" href="#!">Link 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+                    </div>
+                </div>
+            </footer>
+
 
 
 
@@ -73,6 +109,8 @@
     <script src="../RecipeTownCode/public/calendar.js/assets/js/moment.js"></script>
     <script src="../RecipeTownCode/public/calendar.js/assets/js/fullcalendar.js"></script>
     <script src="../RecipeTownCode/public/calendar.js/app/javascripts/full-calendar.js"></script>
+    <script src="../RecipeTownCode/public/js/materialize.js"></script>
+    <script src="../RecipeTownCode/public/js/init.js"></script>
 
 </body>
 
