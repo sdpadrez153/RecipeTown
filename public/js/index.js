@@ -53,9 +53,11 @@ var randomRecipe = ["Steam bun", "Chicken Scallopini", "Butternut Squash and Chi
 "Tuscan Chicken Under a Brick",
 "Veggie Chili Beans and Rice", "Whole Wheat Pasta with Browned Butter and Mizithra Cheese"];
 var searchTerm = randomRecipe[Math.floor(Math.random() * randomRecipe.length)].split(" ").join("+");
+var searchItem = $("#search").val().trim();
 var app_id = "8c6892d6"
 var api_key = "c07009d42ba3bb6f9fd0fbd2c4c206ca";
-var queryUrl = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=" + app_id + "&app_key=" + api_key + "&from=0&to=1"
+var queryUrl = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=" + app_id + "&app_key=" + api_key + "&from=0&to=1";
+var querySearchUrl = "https://api.edamam.com/search?q=" + searchItem + "&app_id=" + app_id + "&app_key=" + api_key + "&from=0&to=1"
 
 $.get(queryUrl)
 .then(res => {
@@ -179,7 +181,7 @@ $.get(queryUrl)
 // $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
 // --For Searching--
-axios.get(queryUrl)
+axios.get(querySearchUrl)
 .then(res => {
   var recipes = res.data.hits;
 
@@ -195,4 +197,6 @@ axios.get(queryUrl)
     };
      console.log(recipeDBinfo)   
   }
+  $("#search").empty();
+  $("#searchItem").append(recipeDBinfo);
 });
