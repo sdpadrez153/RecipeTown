@@ -178,3 +178,22 @@ axios.get(queryUrl)
 // // Add event listeners to the submit and delete buttons
 // $submitBtn.on("click", handleFormSubmit);
 // $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+// --For Searching--
+axios.get(queryUrl)
+.then(res => {
+  var recipes = res.data.hits;
+
+  for (i = 0; i < recipes.length; i++) {
+      var recipeDBinfo = {
+      
+      "recipe_name": recipes[i].recipe.label,
+      "cautions": recipes[i].recipe.cautions[0].toString(),
+      "dietLabels": recipes[i].recipe.dietLabels.toString(),
+      "healthLabels": recipes[i].recipe.healthLabels.toString(),
+      "ingredientsLines": recipes[i].recipe.ingredientLines.toString(),
+      "LONGBLOB": recipes[i].recipe.image,
+    };
+     console.log(recipeDBinfo)   
+  }
+});
