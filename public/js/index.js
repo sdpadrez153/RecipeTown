@@ -117,6 +117,5 @@ $(document).ready(function () {
         $("#searchItem").push(recipeDBinfo2);
         $("#search").empty();
       });
-
   }
 });
