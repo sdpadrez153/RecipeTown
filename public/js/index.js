@@ -53,14 +53,13 @@ var randomRecipe = ["Steam bun", "Chicken Scallopini", "Butternut Squash and Chi
 "Tuscan Chicken Under a Brick",
 "Veggie Chili Beans and Rice", "Whole Wheat Pasta with Browned Butter and Mizithra Cheese"];
 var searchTerm = randomRecipe[Math.floor(Math.random() * randomRecipe.length)].split(" ").join("+");
-var axios = require("axios");
 var app_id = "8c6892d6"
 var api_key = "c07009d42ba3bb6f9fd0fbd2c4c206ca";
-var queryUrl = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=" + app_id + "&app_key=" + api_key + "&from=0&to=1"
+var queryUrl = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=" + app_id + "&app_key=" + api_key + "&from=0&to=1";
 
-axios.get(queryUrl)
+$.get(queryUrl)
 .then(res => {
-  var recipes = res.data.hits;
+  var recipes = res.hits;
 
   for (i = 0; i < recipes.length; i++) {
       var recipeDBinfo = {
