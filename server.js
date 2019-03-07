@@ -1,8 +1,6 @@
-var express = require("express");
-<<<<<<< HEAD
 
-=======
->>>>>>> 7f8893db6190598b6df80c890c213d5ab2043df3
+var express = require("express");
+
 
 var db = require("./models");
 
@@ -13,6 +11,9 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+
+
+app.set("view engine", "handlebars");
 
 // Routes
 require("./routes/apiRoutes")(app);
