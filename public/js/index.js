@@ -1,4 +1,3 @@
-
 var randomRecipe = ["Steam bun", "Chicken Scallopini", "Butternut Squash and Chickpea Stew with Israeli Couscous",
   "Carrot Potato Cheese Soup with Corn",
   "Chickpea Soup with Ginger and Coriander",
