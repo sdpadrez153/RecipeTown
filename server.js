@@ -1,4 +1,7 @@
-var express = require("express");
+const express = require("express");
+const exphbs = require("express-handlebars");
+const passport = require("./config/passport");
+const session = require("express-session");
 
 var db = require("./models");
 
@@ -9,6 +12,15 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+app.use(
+  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+);
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Routes
 require("./routes/apiRoutes")(app);
