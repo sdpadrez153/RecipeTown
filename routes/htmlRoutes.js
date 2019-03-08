@@ -111,9 +111,4 @@ module.exports = function(app) {
   });
   
 };
-app.post("/calender", function (req, res) {
 
-  var newtable = req.body;
-
-  console.log(newtable);
-});

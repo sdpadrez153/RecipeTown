@@ -7,4 +7,11 @@ module.exports = function (app) {
       res.json(dbRecipe);
     });
   });
+
+  app.get("/api/users", function (req, res) {
+    db.Users.findAll({}).then(function (dbUsers) {
+      res.json(dbUsers);
+    });
+  });
+
 }
