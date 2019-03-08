@@ -34,7 +34,7 @@
         <div class="col s12">
 
           <!-- Modal Trigger -->
-          <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Sign In</a>
+          <a id="sign-in" class="waves-effect waves-light btn modal-trigger" href="#modal1">Sign In</a>
           <i class="fab fa-twitter" id="twitter"></i>
           <i class="fab fa-facebook" id="facebook"></i>
           <i class="fab fa-instagram" id="instagram"></i>
@@ -64,10 +64,10 @@
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     {{!-- might need form to start here --}}
-    <div class="modal-content">
-      <h5 class="modal-title" id="exampleModalLabel">Sign In or Sign Up</h5>
-      <div class="modal-body">
-        <form id="login">
+    <form id="login">
+      <div class="modal-content">
+        <h5 class="modal-title" id="exampleModalLabel">Sign In or Sign Up</h5>
+        <div class="modal-body">
           <label for="uname"><b>Username</b></label>
           <input id="username" type="text" placeholder="Enter Username" name="uname" required>
 
@@ -77,13 +77,13 @@
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember Me
           </label>
-        </form>
+        </div>
       </div>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-      <button type="button" class="btn btn-primary">Sign In</button>
-    </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        <button id="modalSubmit" type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
     {{!-- might need form to end here --}}
   </div>
 </body>
