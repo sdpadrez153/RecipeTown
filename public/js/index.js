@@ -57,8 +57,8 @@ var api_key = "c07009d42ba3bb6f9fd0fbd2c4c206ca";
 var queryUrl = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=" + app_id + "&app_key=" + api_key + "&from=0&to=1";
 
 $.get(queryUrl)
-  .then(res => {
-    var recipes = res.hits;
+.then(res => {
+  var recipes = res.hits;
 
     for (i = 0; i < recipes.length; i++) {
       var recipeDBinfo = {
@@ -75,7 +75,7 @@ $.get(queryUrl)
   });
   
   $(document).ready(function () {
-    $("#sign-in").on("click", function (event) {
+    $(".btn").on("click", function (event) {
       console.log("event");
       $('#modal1').modal();
       event.preventDefault();
@@ -125,7 +125,6 @@ $.get(queryUrl)
   // });
 
 
-=======
 
 $(document).ready(function () {
 
