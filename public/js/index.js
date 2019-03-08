@@ -88,10 +88,10 @@ $.get(queryUrl)
     console.log("newUser")
     var newUser = {
         user_name: $("#username").val().trim(),
-        // eventually ecrypt passwords
+        // eventually ecrypt p
     };
 
-    $.ajax("/api/users", {
+    $.ajax({
         type: "POST",
         url: "/api/users",
         data: newUser
