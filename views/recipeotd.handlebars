@@ -1,25 +1,31 @@
+{{!-- --Jumbotron/Header-- --}}
 <div id="index-banner" class="parallax-container">
   <div class="section no-pad-bot">
     <div class="container">
       <br><br>
       <h1 class="header center white-text text-lighten-2">Recipe of the Day</h1>
-
+      <h1>
+        <center>{{recipe.label}}</center>
+      </h1>
     </div>
   </div>
 </div>
 
+<!-- --Placeholder for ROTD-- -->
 <div class="container">
   <div class="section">
     <div class="row">
       <div class="col-lg-12" id="cBlockTwo">
-        <!-- --Placeholder for ROTD-- -->
         <div class="row center">
-          <img data-src="holder.js/100px280/thumb" alt="100%x280" style="height: 450px; width: 100%; display: block;"
-            src="https://restaurantden.com/wp-content/uploads/2017/09/free-stock-food-photography-websites.jpg"
-            data-holder-rendered="true">
+          <img data-src="holder.js/100px280/thumb" alt="100%x280" style="height: 400px; width: 100%; display: block;"
+            src="{{recipe.image}}" data-holder-rendered="true">
+        </div>
+        <div class="col-lg-12">
+          <h5>
+            <center>{{recipe.ingredientLines}}</center>
+          </h5>
         </div>
         <br><br>
-
       </div>
     </div>
   </div>
@@ -28,35 +34,22 @@
 <footer class="page-footer">
   <div class="container">
     <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Team Bio</h5>
-        <p class="grey-text text-lighten-4">Team Members: Sarah Clark, Yasiin Muhammad, Isai Ramirez,
-          Daniel
-          Mata.
-          This is our Project 2 Website</p>
-
-
-      </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Settings</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
-        </ul>
-      </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Connect</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
-        </ul>
+      <div class="col-lg-12">
+        <h5>
+          <center>Team Bio</center>
+        </h5>
+        <p>
+          <center>Team Members: Sarah Clark, Yasiin Muhammad, Isai Ramirez,
+            Daniel Mata.
+         </center>
+        </p>
+        <p>
+          <center>This is our Project 2 Website</center>
+        </p>
       </div>
     </div>
   </div>
+
   <div class="footer-copyright">
     <div class="container">
       Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
