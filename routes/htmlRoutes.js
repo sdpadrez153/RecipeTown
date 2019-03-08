@@ -60,10 +60,10 @@ var randomRecipe = [
   "Whole Wheat Pasta with Browned Butter and Mizithra Cheese"
 ];
 
-module.exports = function (app) {
+module.exports = function(app) {
   // Load index page
-  app.get("/", function (req, res) {
-    db.Recipes.findAll({}).then(function (dbRecipes) {
+  app.get("/", function(req, res) {
+    db.Recipes.findAll({}).then(function(dbRecipes) {
       res.render("index", {
         msg: "Welcome!",
         Recipes: dbRecipes
@@ -71,11 +71,11 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/calendar", function (req, res) {
+  app.get("/calendar", function(req, res) {
     res.render("calendar");
   });
 
-  app.get("/recipeotd", function (req, res) {
+  app.get("/recipeotd", function(req, res) {
     var searchTerm = randomRecipe[
       Math.floor(Math.random() * randomRecipe.length)
     ]
@@ -98,35 +98,17 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/contact", function (req, res) {
+  app.get("/contact", function(req, res) {
     res.render("contact");
   });
   // Load example page and pass in an example by id
-  app.get("/recipe/:id", function (req, res) {
-    db.Recipes.findOne({ where: { id: req.params.id } }).then(function (recipe) {
+  app.get("/recipe/:id", function(req, res) {
+    db.Recipes.findOne({ where: { id: req.params.id } }).then(function(recipe) {
       res.render("Recipes", {
         Recipes: recipe
       });
     });
-  })};
+  });
+  
+};
 
-
-  // }.then(function() {
-  //   connection.query(
-  //     "INSTER INTO users SETS ?",
-  //     {
-  //       user_name: newUser,
-  //     }
-  //   )
-  // })
-  // app.post("INSERT INTO Users SET ?", {
-  //   firstName: 'Fred',
-  //   lastName: 'Flintstone'
-  // })
-    // .then(function (response) {
-    //   console.log(response);
-    // })
-    // .catch(function (error) {
-    //   console.log(error);
-    // });
- 
