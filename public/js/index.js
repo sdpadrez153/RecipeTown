@@ -81,7 +81,7 @@ $(document).ready(function(){
         event.preventDefault();
     }); 
 
-    $(".modal-body").on("button", function (event) {
+    $(".modal-body").on("submit", function (event) {
         event.preventDefault();
         var newUser = {
             user_name: $("#username").val().trim(),
