@@ -125,7 +125,6 @@ $.get(queryUrl)
   // });
 
 
-=======
 
 $(document).ready(function () {
 
