@@ -74,7 +74,31 @@ $.get(queryUrl)
     }
   });
 
-// // Get references to page elements
+$(document).ready(function(){
+  $(".btn").on("click", function (event) {
+        // console.log(event); 
+        $("#modal1").modal();
+        event.preventDefault();
+    }); 
+
+    $(".modal-body").on("button", function (event) {
+        event.preventDefault();
+        var newUser = {
+            user_name: $("#username").val().trim(),
+            password: $("#password").val().trim(),
+        }
+        $.ajax("/api/recipes", {
+            type: "POST",
+            url: "/api/users",
+            data: newUser
+        }).then(function (data) {
+            location.reload();
+            console.log("hi");
+        });
+    });
+      });
+
+      // // Get references to page elements
 // var $exampleText = $("#example-text");
 // var $exampleDescription = $("#example-description");
 // var $submitBtn = $("#submit");
@@ -173,27 +197,3 @@ $.get(queryUrl)
 // // Add event listeners to the submit and delete buttons
 // $submitBtn.on("click", handleFormSubmit);
 // $exampleList.on("click", ".delete", handleDeleteBtnClick);
-
-$(document).ready(function(){
-  $(".btn").on("click", function (event) {
-        // console.log(event); 
-        $("#modal1").modal();
-        event.preventDefault();
-    }); 
-
-});
-    $(".modal-body").on("button", function (event) {
-        event.preventDefault();
-
-        var newUser = {
-            user_name: $("#username").val().trim(),
-        };
-        $.ajax("/api/recipes", {
-            type: "POST",
-            url: "/api/recipes",
-            data: newUser
-        }).then(function (data) {
-            location.reload();
-            console.log(newUser);
-        });
-    });
