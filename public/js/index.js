@@ -57,8 +57,8 @@ var api_key = "c07009d42ba3bb6f9fd0fbd2c4c206ca";
 var queryUrl = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=" + app_id + "&app_key=" + api_key + "&from=0&to=1";
 
 $.get(queryUrl)
-.then(res => {
-  var recipes = res.hits;
+  .then(res => {
+    var recipes = res.hits;
 
     for (i = 0; i < recipes.length; i++) {
       var recipeDBinfo = {
@@ -74,31 +74,31 @@ $.get(queryUrl)
     }
   });
 
-$(document).ready(function(){
+$(document).ready(function () {
   $(".btn").on("click", function (event) {
-        // console.log(event); 
-        $("#modal1").modal();
-        event.preventDefault();
-    }); 
+    // console.log(event); 
+    $("#modal1").modal();
+    event.preventDefault();
+  });
 
-    $(".modal-body").on("button", function (event) {
-        event.preventDefault();
-        var newUser = {
-            user_name: $("#username").val().trim(),
-            password: $("#password").val().trim(),
-        }
-        $.ajax("/api/recipes", {
-            type: "POST",
-            url: "/api/users",
-            data: newUser
-        }).then(function (data) {
-            location.reload();
-            console.log("hi");
-        });
+  $("#login").on("submit", function (event) {
+    event.preventDefault();
+    var newUser = {
+      user_name: $("#username").val().trim(),
+      password: $("#password").val().trim(),
+    }
+    $.ajax({
+      type: "POST",
+      url: "/api/users",
+      data: newUser
+    }).then(function (data) {
+      location.reload();
+      console.log("hi");
     });
-      });
+  });
+});
 
-      // // Get references to page elements
+// // Get references to page elements
 // var $exampleText = $("#example-text");
 // var $exampleDescription = $("#example-description");
 // var $submitBtn = $("#submit");
@@ -198,31 +198,31 @@ $(document).ready(function(){
 // $submitBtn.on("click", handleFormSubmit);
 // $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
-$(document).ready(function(){
+$(document).ready(function () {
   $(".btn").on("click", function (event) {
-        console.log("event"); 
-        $('#modal1').modal();
-        event.preventDefault();
-        
-    }); 
-   $("#new_user").on("submit", function (event) {
-  event.preventDefault();
-  console.log("newUser")
-  // var newUser = {
-  //     user_name: $("#username").val().trim(),
-  // };
+    console.log("event");
+    $('#modal1').modal();
+    event.preventDefault();
 
-  // $.ajax("/api/recipes", {
-  //     type: "POST",
-  //     url: "/api/recipes",
-  //     data: newUser
-  // }).then(function (data) {
-  //     location.reload();
-  //     console.log(newUser);
-  // });
+  });
+  $("#new_user").on("submit", function (event) {
+    event.preventDefault();
+    console.log("newUser")
+    // var newUser = {
+    //     user_name: $("#username").val().trim(),
+    // };
+
+    // $.ajax("/api/recipes", {
+    //     type: "POST",
+    //     url: "/api/recipes",
+    //     data: newUser
+    // }).then(function (data) {
+    //     location.reload();
+    //     console.log(newUser);
+    // });
+  });
 });
-});
-    
+
 $("#new_user").on("submit", function (event) {
   // event.preventDefault();
   console.log("newUser")
