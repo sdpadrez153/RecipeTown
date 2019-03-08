@@ -75,7 +75,7 @@ $.get(queryUrl)
   });
 
 $(document).ready(function(){
-  $(".btn").on("click", function (event) {
+  $(".modal1").on("click", function (event) {
         // console.log(event); 
         $("#modal1").modal();
         event.preventDefault();
