@@ -176,24 +176,42 @@ $.get(queryUrl)
 
 $(document).ready(function(){
   $(".btn").on("click", function (event) {
-        // console.log(event); 
-        $("#modal1").modal();
+        console.log("event"); 
+        $('#modal1').modal();
         event.preventDefault();
+        
     }); 
+   $("#new_user").on("submit", function (event) {
+  event.preventDefault();
+  console.log("newUser")
+  // var newUser = {
+  //     user_name: $("#username").val().trim(),
+  // };
 
+  // $.ajax("/api/recipes", {
+  //     type: "POST",
+  //     url: "/api/recipes",
+  //     data: newUser
+  // }).then(function (data) {
+  //     location.reload();
+  //     console.log(newUser);
+  // });
 });
-    $(".modal-body").on("button", function (event) {
-        event.preventDefault();
+});
+    
+$("#new_user").on("submit", function (event) {
+  // event.preventDefault();
+  console.log("newUser")
+  // var newUser = {
+  //     user_name: $("#username").val().trim(),
+  // };
 
-        var newUser = {
-            user_name: $("#username").val().trim(),
-        };
-        $.ajax("/api/recipes", {
-            type: "POST",
-            url: "/api/recipes",
-            data: newUser
-        }).then(function (data) {
-            location.reload();
-            console.log(newUser);
-        });
-    });
+  // $.ajax("/api/recipes", {
+  //     type: "POST",
+  //     url: "/api/recipes",
+  //     data: newUser
+  // }).then(function (data) {
+  //     location.reload();
+  //     console.log(newUser);
+  // });
+});
