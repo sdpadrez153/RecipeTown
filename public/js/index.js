@@ -10,7 +10,7 @@ var randomRecipe = ["Steam bun", "Chicken Scallopini", "Butternut Squash and Chi
   "Edamame and Pea Soup with Herbed Lemon Cream",
   "Hearty Spinach and Sausage Soup",
   "Potato Leek Soup",
-  "Roasted Autumn Vegetable Chowder",
+  "Roasted Autumn Vegetable Chowder", 
   "Smoky Spiced Black-Eyed Peas with Bacon",
   "Spicy Pumpkin Soup with Cilantro Pepita Pesto",
   "Bacon-wrapped Beef Tenderloin Steaks with Smoked Paprika Butter",
