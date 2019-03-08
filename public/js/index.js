@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 
 
@@ -54,6 +55,8 @@ $(document).ready(function () {
     "Tuna Noodle Casserole",
     "Tuscan Chicken Under a Brick",
     "Veggie Chili Beans and Rice", "Whole Wheat Pasta with Browned Butter and Mizithra Cheese"];
+  
+// --Appends ROTD--
   var searchTerm = randomRecipe[Math.floor(Math.random() * randomRecipe.length)].split(" ").join("+");
   var app_id = "8c6892d6"
   var api_key = "c07009d42ba3bb6f9fd0fbd2c4c206ca";
@@ -86,36 +89,52 @@ $(document).ready(function () {
   console.log("We are here")
 
 
+//  --Appends Recipes Searched--
   function myfunction() {
     var searchItem = document.getElementById("search");
     var searchTerm = searchItem.value;
     console.log(searchTerm)
-    var querySearchUrl = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=" + app_id + "&app_key=" + api_key + "&from=0&to=1";
-
-
+    var querySearchUrl = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=8c6892d6&app_key=c07009d42ba3bb6f9fd0fbd2c4c206ca&from=0&to=1";
+    
     $.get(querySearchUrl)
       .then(res => {
-
+        
         var recipes = res.hits;
-
-
+        
+        
         for (i = 0; i < recipes.length; i++) {
           var recipeDBinfo2 = {
-
+            
+            "LONGBLOB": recipes[i].recipe.image,
             "recipe_name": recipes[i].recipe.label,
             "cautions": recipes[i].recipe.cautions[0],
             "dietLabels": recipes[i].recipe.dietLabels,
             "healthLabels": recipes[i].recipe.healthLabels,
             "ingredientsLines": recipes[i].recipe.ingredientLines,
-            "LONGBLOB": recipes[i].recipe.image,
+            "calories": recipes[i].recipe.calories,
+            "totalTime": recipes[i].recipe.totalTime,
           };
-
+          var LONGBLOB = $("<img>").attr("src", recipeDBinfo2.LONGBLOB);
+          var recipe_name = $("<h2>").text(recipeDBinfo2.recipe_name);
+          var dietLabels = $("<p2>").text(recipeDBinfo2.dietLabels);
+          var healthLabels = $("<p3>").text("Health Labels: " + recipeDBinfo2.healthLabels);
+          var ingredientsLines = $("<p4>").text("Ingredients: " + recipeDBinfo2.ingredientsLines);
+          var calories = $("<p5>").text("Total Calories: " + recipeDBinfo2.calories);
+          var totalTime = $("<p6>").text("Total Cook Time: "+ recipeDBinfo2.totalTime + " min");
+          
           console.log(recipeDBinfo2);
           console.log(recipeDBinfo2.recipe_name);
         }
+        $("#searchItem").append(LONGBLOB, recipe_name);
+        $("#nutrition").append(ingredientsLines);
+        $("#cal").append(calories);
+        $("#cookTime").append(totalTime);
 
-        $("#searchItem").push(recipeDBinfo2);
+
+
         $("#search").empty();
-      });
-  }
+       });
+
+      }
+
 });

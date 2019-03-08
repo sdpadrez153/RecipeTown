@@ -12,12 +12,17 @@
   <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="/js/materialize.js"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="/js/init.js"></script>
-  <script src="js/index.js"></script>
+  <script src="/js/index.js"></script>
 
 </head>
 
@@ -27,6 +32,9 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
+
+          <!-- Modal Trigger -->
+          <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Sign In</a>
           <i class="fab fa-twitter" id="twitter"></i>
           <i class="fab fa-facebook" id="facebook"></i>
           <i class="fab fa-instagram" id="instagram"></i>
@@ -40,19 +48,44 @@
         <div class="background">
           <img src="https://i.ndtvimg.com/i/2017-10/thali_650x400_61508157304.jpg">
         </div>
-        <a href="#name"><span class="white-text name">John Doe</span></a>
-        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        <a href="#name"><span class="white-text name">RecipeTown</span></a>
+        <a href="#email"><span class="white-text email">RecipeTown@gmail.com</span></a>
       </div>
     </li>
     <li><a class="waves-effect waves-red" href="/">Home</a></li>
     <li><a class="waves-effect waves-red" href="/recipeotd">Recipe of the Day</a></li>
     <li><a class="waves-effect waves-red" href="/calendar">Calendar</a></li>
-    <li><a class="waves-effect waves-red" href="forum.html">Forum</a></li>
     <li><a class="waves-effect waves-red" href="/contact">Contact</a></li>
   </ul>
 
   {{{body}}}
 
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    {{!-- might need form to start here --}}
+    <div class="modal-content">
+      <h5 class="modal-title" id="exampleModalLabel">Sign In or Sign Up</h5>
+      <div class="modal-body">
+        <form id="login">
+          <label for="uname"><b>Username</b></label>
+          <input id="username" type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember Me
+          </label>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      <button type="button" class="btn btn-primary">Sign In</button>
+    </div>
+    {{!-- might need form to end here --}}
+  </div>
 </body>
 
 </html>
