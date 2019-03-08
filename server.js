@@ -1,7 +1,9 @@
+var fs = require("fs");
 const express = require("express");
 const exphbs = require("express-handlebars");
 const passport = require("./config/passport");
 const session = require("express-session");
+
 
 var db = require("./models");
 
