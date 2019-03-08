@@ -63,28 +63,30 @@
 
 
   <!-- Modal Structure -->
-  <form class="LogIN">
   <div id="modal1" class="modal">
+    {{!-- might need form to start here --}}
     <div class="modal-content">
       <h5 class="modal-title" id="exampleModalLabel">Sign In or Sign Up</h5>
       <div class="modal-body">
-        <label for="uname"><b>Username</b></label>
-        <input id="username" type="text" placeholder="Enter Username" name="uname" required>
+        <form id="login">
+          <label for="uname"><b>Username</b></label>
+          <input id="username" type="text" placeholder="Enter Username" name="uname" required>
 
-        <label for="psw"><b>Password</b></label>
-        <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+          <label for="psw"><b>Password</b></label>
+          <input id="password" type="password" placeholder="Enter Password" name="psw" required>
 
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember Me
-        </label>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember Me
+          </label>
+        </form>
       </div>
     </div>
     <div class="modal-footer">
       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
       <button type="button" class="btn btn-primary">Sign In</button>
     </div>
+    {{!-- might need form to end here --}}
   </div>
-</form>
 </body>
 
 </html>
