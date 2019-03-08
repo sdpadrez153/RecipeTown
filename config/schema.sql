@@ -1,2 +1,3 @@
-DROP DATABASE IF EXISTS recipetown_db;
-CREATE DATABASE recipetown_db;
+DROP DATABASE IF EXISTS ic1yj35hed9zx0o5;
+CREATE DATABASE ic1yj35hed9zx0o5;
+USE ic1yj35hed9zx0o5;

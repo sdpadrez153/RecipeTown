@@ -6,7 +6,6 @@ module.exports = function(sequelize, DataTypes) {
     dietLabels: DataTypes.STRING,
     healthLabels: DataTypes.STRING,
     ingredientsLines: DataTypes.STRING
-
   },{
     timestamps: false
   });

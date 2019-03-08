@@ -74,7 +74,31 @@ $.get(queryUrl)
     }
   });
 
-// // Get references to page elements
+$(document).ready(function(){
+  $(".btn").on("click", function (event) {
+        // console.log(event); 
+        $("#modal1").modal();
+        event.preventDefault();
+    }); 
+
+    $(".modal-body").on("button", function (event) {
+        event.preventDefault();
+        var newUser = {
+            user_name: $("#username").val().trim(),
+            password: $("#password").val().trim(),
+        }
+        $.ajax("/api/recipes", {
+            type: "POST",
+            url: "/api/users",
+            data: newUser
+        }).then(function (data) {
+            location.reload();
+            console.log("hi");
+        });
+    });
+      });
+
+      // // Get references to page elements
 // var $exampleText = $("#example-text");
 // var $exampleDescription = $("#example-description");
 // var $submitBtn = $("#submit");
