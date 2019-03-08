@@ -197,3 +197,48 @@ $(document).ready(function(){
 // // Add event listeners to the submit and delete buttons
 // $submitBtn.on("click", handleFormSubmit);
 // $exampleList.on("click", ".delete", handleDeleteBtnClick);
+<<<<<<< HEAD
+=======
+
+$(document).ready(function(){
+  $(".btn").on("click", function (event) {
+        console.log("event"); 
+        $('#modal1').modal();
+        event.preventDefault();
+        
+    }); 
+   $("#new_user").on("submit", function (event) {
+  event.preventDefault();
+  console.log("newUser")
+  // var newUser = {
+  //     user_name: $("#username").val().trim(),
+  // };
+
+  // $.ajax("/api/recipes", {
+  //     type: "POST",
+  //     url: "/api/recipes",
+  //     data: newUser
+  // }).then(function (data) {
+  //     location.reload();
+  //     console.log(newUser);
+  // });
+});
+});
+    
+$("#new_user").on("submit", function (event) {
+  // event.preventDefault();
+  console.log("newUser")
+  // var newUser = {
+  //     user_name: $("#username").val().trim(),
+  // };
+
+  // $.ajax("/api/recipes", {
+  //     type: "POST",
+  //     url: "/api/recipes",
+  //     data: newUser
+  // }).then(function (data) {
+  //     location.reload();
+  //     console.log(newUser);
+  // });
+});
+>>>>>>> c5ef7f11762bddb2342b2a9d07dd42f735a59746

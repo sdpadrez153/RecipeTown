@@ -6,6 +6,10 @@ module.exports = function(sequelize, DataTypes) {
     dietLabels: DataTypes.STRING,
     healthLabels: DataTypes.STRING,
     ingredientsLines: DataTypes.STRING
+<<<<<<< HEAD
+=======
+
+>>>>>>> c5ef7f11762bddb2342b2a9d07dd42f735a59746
   },{
     timestamps: false
   });
